@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>闭包陷阱</title>
+</head>
+<body>
+    <!-- <button id="add">add</button> -->
+	
+	<script>
+// 		function foo(){
+// 			var el = document.getElementById('add')
+// 			el.onclick = function(){
+// 				console.log(el.id)
+// 			}
+// 		}
+// 		foo()
+		function foo(){
+			var el = document.getElementById('add')
+			el.onclick = function(){
+				console.log(el.id)
+			}
+			//当DOM节点被删除的时候,咱们js还在对dom进行引用,这时候需要清除js对DOM的引用避免内存泄漏
+			el = null;
+		}
+		foo()
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+    <script>
+        // Math.pow(2,2)
+        // Math.pow(3,2)
+        // 封装幂函数
+        function makePower(power){
+            return function(number){
+                return Math.pow(number,power)
+            }
+        }
+        let power2 = makePower(2);//求2次幂
+        let power3 = makePower(3);//求3次幂
+        console.log(power2(4))
+        console.log(power2(5))
+        console.log(power3(4))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

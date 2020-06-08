@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>缓存全局变量</title>
+</head>
+<body>
+    <button id="add1">add1</button>
+	<button id="add2">add2</button>
+	<p>aaa</p>
+	<button id="add3">add3</button>
+	<button id="add4">add4</button>
+	<p>bbb</p>
+	<button id="add5">add5</button>
+	<button id="add6">add6</button>
+	<p>ccc</p>
+	<button id="add7">add7</button>
+	<button id="add8">add8</button>
+	<script>
+		// 全局变量不缓存
+		function getAdd(){
+			let oAdd1 = document.getElementById('add1')
+			
+			let oAdd3 = document.getElementById('add3')
+
+			let oAdd5 = document.getElementById('add5')
+
+			let oAdd7 = document.getElementById('add7')
+
+		}
+		// 全局变量缓存到局部
+		function getAdd2(){
+			let obj = document
+			let oAdd1 = obj.getElementById('add1')
+
+			let oAdd3 = obj.getElementById('add3')
+
+			let oAdd5 = obj.getElementById('add5')
+
+			let oAdd7 = obj.getElementById('add7')
+
+		}
+	</script>
+</body>
+</html>

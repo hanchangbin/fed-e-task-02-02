@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+    <script>
+        // 求取不同级别员工的工资= 绩效工资+ 基础工资
+        function makeSalary(base){
+            return function(performance){
+                return base + performance
+            }
+        }
+        let sl1  = makeSalary(12000);//级别1的基本工资
+        let sl2 = makeSalary(15000);//级别2的基本工资
+        console.log(sl1(3000));//级别1的绩效工资
+        console.log(sl2(3000));//级别2的绩效工资
+        // 在浏览器的sources打断点调试,看Call Stack(调用栈)和Scope(作用域),观察Scope查看闭包是什么时候发生的
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

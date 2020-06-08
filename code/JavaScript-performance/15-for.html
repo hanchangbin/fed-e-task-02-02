@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for循环优化</title>
+</head>
+<body>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+   <p class="btn">add</p>
+	<script>
+		var aBtns = document.getElementsByClassName('btn');
+		for(var i = 0 ; i < aBtns.length ; i++){
+			console.log(i)
+		}
+		for(var i = 0, len = aBtns.length;i < len;i++){
+			console.log(i)
+		}
+	</script>
+</body>
+</html>

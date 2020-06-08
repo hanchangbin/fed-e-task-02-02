@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timeline记录内存</title>
+</head>
+<body>
+    <button id="add">add</button>
+	<script>
+		const arrList = []
+		function test(){
+			for(let i = 0 ; i < 10000 ; i++){
+				document.body.appendChild(document.createElement('p'))
+			}
+			arrList.push(new Array(10000).join('x'))
+		}
+		const oAdd = document.getElementById('add')
+		oAdd.onclick = test;
+	</script>
+</body>
+</html>
